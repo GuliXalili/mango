@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1  style="background-color:rgb(227, 126, 215);">CAKES</h1>
+    <br>
+    {% for a in malumotlar1 %}
+        <h3>{{ a.name }}</h3>
+        <p>{{ a.engridients }}</p>
+        <p>{{ a.height }}</p>
+        <img src="{{ a.img }}" alt="" style="width: 400px">
+        <p>{{ a.price }}</p>
+        <p>{{ a.date }}</p>
+    {% endfor %}
+</body>
+</html>

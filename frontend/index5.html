@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1  style="background-color:rgb(227, 126, 215);">MESSANGERS</h1>
+    <br>
+    {% for f in malumotlar1 %}
+        <h3>{{ f.name }}</h3>
+        <p>{{ f.users }}</p>
+        <img src="{{ f.img }}" alt="" style="width: 400px">
+        <p>{{ f.date }}</p>
+    {% endfor %}
+</body>
+</html>
